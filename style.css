@@ -1,3 +1,19 @@
+.clear {
+    background-image: url(https://static4.depositphotos.com/1000423/473/i/450/depositphotos_4734399-stock-photo-exquisite-landscape-with-blue-skies.jpg);
+}
+
+.clouds {
+    background-image:url(https://i.pinimg.com/originals/1b/88/2c/1b882c34e34b704cf6be9bf1c269baac.jpg);
+}
+
+.rain {
+    background-image: url(https://downloadwap.com/thumbs2/wallpapers/p2/2019/nature/29/334710a913413026.jpg) ;
+}
+
+.snow {
+    background-image:url(https://diapogram.com/upload/2019/04/11/20190411233920-2debfebb.jpg);
+}
+
 body {
     font-family: 'Trebuchet MS';
     text-align: center;
@@ -6,6 +22,11 @@ body {
     display: flex;
     justify-content : center;
     align-items: center;
+
+    background-position: center;
+    background-size: cover;
+    color: rgb(120, 110, 110);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
 
 }
 
@@ -22,6 +43,21 @@ i.wi {
     line-height: 3em;
 }
 
-tooltip {
-    display: none;
+.tooltip {
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    left: 260px;
+    color: #fff;
+    background-color: #222;
+    border-radius: 5px;
+    padding: 60px;
+    font-size: 12px;
+    transition: opacity .3s, top .5s;
 }
+
+h1:hover .tooltip {
+    top: 150px;
+    opacity: 1;
+}
+

@@ -7,7 +7,6 @@ const weatherIcons = {
     "Drizzle": "wi wi-day-sleet",
 }
 
-
 function capitalize(str){
     return str[0].toUpperCase() + str.slice(1);
 }
@@ -46,10 +45,21 @@ function displayWeatherInfos(data){
     document.querySelector('#ville').textContent = name;
     document.querySelector('#temperature').textContent= Math.round(temperature);
     document.querySelector('#conditions').textContent = capitalize(description);
-
+    document.querySelector("i.wi").className = weatherIcons[conditions];
+    document.body.className = conditions.toLowerCase();
 }
 
-document.querySelector('i.wi').className = weatherIcons[conditions];
+const ville = document.querySelector("ville");
+
+ville.addEventListener("click", () => {
+  ville.contentEditable = true;
+});
+
+ville.addEventListener("keydown", (e) => {
+  if (e.keyCode === 13) {
+    e.preventDefault();
+  }
+});
 
 
 
