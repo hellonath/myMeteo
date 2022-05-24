@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+    <title>Meteo</title>
+</head>
+
+
+<body>
+    <section>
+        <h1>
+            <span id="ville">Marseille</span>
+            <span class="tooltip"></span>
+        </h1>
+
+
+        <form>
+            <div class="form-group">
+                <input type="text" class="form-control" id="inputCity"/>
+            </div>
+
+            <button type="submit" class="btn">
+                Rechercher
+            </button>
+        </form>
+        
+
+        <i class="wi wi-day-rain"></i>
+        <h2>
+            <span id="temperature">25</span>C° (<span id="conditions">Ciel
+                dégagé
+            </span>)
+        </h2>
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
